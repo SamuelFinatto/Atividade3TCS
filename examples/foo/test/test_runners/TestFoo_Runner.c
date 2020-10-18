@@ -32,6 +32,7 @@
 /*=======External Functions This Runner Calls=====*/
 extern void setUp(void);
 extern void tearDown(void);
+extern void Payment_TestValueZero_ReturnsOne(void);
 
 
 /*=======Suite Setup=====*/
@@ -66,6 +67,7 @@ int main(void)
 {
   suite_setup();
   UnityBegin("test/TestFoo.c");
+  RUN_TEST(Payment_TestValueZero_ReturnsOne, 16);
 
   return suite_teardown(UnityEnd());
 }
