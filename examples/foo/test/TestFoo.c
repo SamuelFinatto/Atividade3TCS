@@ -110,3 +110,13 @@ TEST(Foo, Payment_WhenValueIsNegativeAndStatusEstudanteAposentado_ReturnsOne)
 
   TEST_ASSERT_EQUAL(1,result);
 }
+
+TEST(Foo, Payment_TestValueIsOkAndStatusIsNotOk_ReturnsTwo)
+{
+  float value = 3000;
+  char status[20] = "fulano";
+
+  int result = payment(value, status);
+
+  TEST_ASSERT_EQUAL(2,result);
+}

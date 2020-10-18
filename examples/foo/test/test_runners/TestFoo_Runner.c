@@ -13,4 +13,5 @@ TEST_GROUP_RUNNER(Foo)
   RUN_TEST_CASE(Foo,Payment_WhenValueIsOkAndStatusEstudanteAposentado_ReturnsZero);
   RUN_TEST_CASE(Foo,Payment_WhenValueIsNumberGreterThanTheLimitAndStatusEstudanteAposentado_ReturnsOne);
   RUN_TEST_CASE(Foo,Payment_WhenValueIsNegativeAndStatusEstudanteAposentado_ReturnsOne);
+  RUN_TEST_CASE(Foo,Payment_TestValueIsOkAndStatusIsNotOk_ReturnsTwo);
 }
