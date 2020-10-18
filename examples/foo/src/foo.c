@@ -1,9 +1,5 @@
 
 #include "foo.h"
-#include <stddef.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 
 int foo(int a,int b){
 	return a-b-1;
