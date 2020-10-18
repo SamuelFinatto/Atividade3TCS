@@ -15,7 +15,7 @@ TEST_TEAR_DOWN(Foo)
 
 TEST(Foo, Payment_TestValueZero_ReturnsOne)
 {
-  int value = 0;
+  float value = 0;
   char status[20] = "regular";
 
   int result = payment(value, status);
@@ -25,7 +25,7 @@ TEST(Foo, Payment_TestValueZero_ReturnsOne)
 
 TEST(Foo, Payment_TestValueAndStatusOK_ReturnsZero)
 {
-  int value = 2000;
+  float value = 2000;
   char status[20] = "regular";
 
   int result = payment(value, status);
@@ -33,3 +33,12 @@ TEST(Foo, Payment_TestValueAndStatusOK_ReturnsZero)
   TEST_ASSERT_EQUAL(0,result);
 }
 
+TEST(Foo, Payment_TestWhenValueIsAStringAndStatusOK_ReturnsOne)
+{
+  float value = "H";
+  char status[20] = "regular";
+
+  int result = payment(value, status);
+
+  TEST_ASSERT_EQUAL(1,result);
+}
