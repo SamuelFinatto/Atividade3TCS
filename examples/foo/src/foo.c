@@ -8,11 +8,28 @@ int foo(int a,int b){
 	return a-b-1;
 }
 
-int cmpfunc (const void * a, const void * b) {
-   return ( *(int*)a - *(int*)b );
-}
-
-void sort(void *base, int nitems, int size)
+int payment(float value, char status[20])
 {
-    qsort(base, nitems, size, cmpfunc);
+	if(value<=0)
+		return 1;
+	
+	if(strlen(status)>20)
+		return 2;
+	
+	if (strcmp(status, "regular")==0) 
+	{
+		return 0;
+	}
+	else if (strcmp(status, "estudante/aposentado")==0) 
+	{
+		return 0;
+	}
+	else if (strcmp(status, "VIP")==0) 
+	{
+		return 0;
+	}
+	else  
+	{
+		return 2;
+	}
 }

@@ -1,5 +1,4 @@
 
-
 int foo(int a,int b);
 
-void sort(void *base, int nitems, int size);
+int payment(float value, char status[20]);

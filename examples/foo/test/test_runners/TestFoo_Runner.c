@@ -32,24 +32,6 @@
 /*=======External Functions This Runner Calls=====*/
 extern void setUp(void);
 extern void tearDown(void);
-extern void test_foo1(void);
-extern void test_foo2(void);
-extern void test_sort1(void);
-extern void test_sort_duplicatedValues(void);
-extern void test_sort_negativeValues(void);
-extern void test_sort_OneValue(void);
-extern void test_sort_OneValueDifferent(void);
-extern void test_sort_OnlyNegativeValues(void);
-extern void test_sort_BigArray(void);
-extern void test_sort_With0Values(void);
-extern void test_sort_WithDifferentSizes(void);
-extern void test_sort_ArrayOfChars(void);
-extern void test_sort_BigAndWorstCase(void);
-extern void test_sort_BigAndBestCase(void);
-extern void test_sort_EmptyArray(void);
-extern void test_sort_DecimalValues(void);
-extern void test_sort_NullArray(void);
-
 
 /*=======Suite Setup=====*/
 static void suite_setup(void)
@@ -83,23 +65,6 @@ int main(void)
 {
   suite_setup();
   UnityBegin("test/TestFoo.c");
-  RUN_TEST(test_foo1, 15);
-  RUN_TEST(test_foo2, 22);
-  RUN_TEST(test_sort1, 27);
-  RUN_TEST(test_sort_duplicatedValues, 40);
-  RUN_TEST(test_sort_negativeValues, 67);
-  RUN_TEST(test_sort_OneValue, 80);
-  RUN_TEST(test_sort_OneValueDifferent, 93);
-  RUN_TEST(test_sort_OnlyNegativeValues, 106);
-  RUN_TEST(test_sort_BigArray, 119);
-  RUN_TEST(test_sort_With0Values, 132);
-  RUN_TEST(test_sort_WithDifferentSizes, 145);
-  RUN_TEST(test_sort_ArrayOfChars, 158);
-  RUN_TEST(test_sort_BigAndWorstCase, 170);
-  RUN_TEST(test_sort_BigAndBestCase, 182);
-  RUN_TEST(test_sort_EmptyArray, 194);
-  RUN_TEST(test_sort_DecimalValues, 206);
-  RUN_TEST(test_sort_NullArray, 218);
 
   return suite_teardown(UnityEnd());
 }

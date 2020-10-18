@@ -8,15 +8,15 @@ int payment(float value, char status[20])
 	if(strlen(status)>20)
 		return 2;
 	
-	if (strcmp(name, "regular")==0) 
+	if (strcmp(status, "regular")==0) 
 	{
 		return 0;
 	}
-	else if (strcmp(name, "estudante/aposentado")==0) 
+	else if (strcmp(status, "estudante/aposentado")==0) 
 	{
 		return 0;
 	}
-	else if (strcmp(name, "VIP")==0) 
+	else if (strcmp(status, "VIP")==0) 
 	{
 		return 0;
 	}
