@@ -1,9 +1,4 @@
-#include <string.h>
-#include "foo.h"
-
-int foo(int a,int b){
-	return a-b-1;
-}
+#include "string.h"
 
 int payment(float value, char status[20])
 {

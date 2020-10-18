@@ -32,3 +32,4 @@ TEST(Foo, Payment_TestValueAndStatusOK_ReturnsZero)
 
   TEST_ASSERT_EQUAL(0,result);
 }
+
