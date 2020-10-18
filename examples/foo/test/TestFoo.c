@@ -42,3 +42,33 @@ TEST(Foo, Payment_TestWhenValueIsAStringAndStatusOK_ReturnsOne)
 
   TEST_ASSERT_EQUAL(1,result);
 }
+
+TEST(Foo, Payment_TestValueAndVIPOK_ReturnsZero)
+{
+  float value = 8000;
+  char status[20] = "VIP";
+
+  int result = payment(value, status);
+
+  TEST_ASSERT_EQUAL(0,result);
+}
+
+TEST(Foo, Payment_TestVIPValueNegative_ReturnsOne)
+{
+  float value = -2;
+  char status[20] = "VIP";
+
+  int result = payment(value, status);
+
+  TEST_ASSERT_EQUAL(1,result);
+}
+
+TEST(Foo, Payment_TestVIPValueBigger_Returns1)
+{
+  float value = 100000;
+  char status[20] = "VIP";
+
+  int result = payment(value, status);
+
+  TEST_ASSERT_EQUAL(1,result);
+}
