@@ -7,7 +7,7 @@ int foo(int a,int b){
 
 int payment(float value, char status[20])
 {
-	if(value<=0)
+	if(value<=0 && value>99999)
 		return 1;
 	
 	if(strlen(status)>20)
